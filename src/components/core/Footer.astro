@@ -1,0 +1,13 @@
+---
+// To pass the tailwindcss classes to the astro component
+const { class: className } = Astro.props;
+---
+
+<footer class:list={["py-5 px-6 w-full", className]}>
+  <div class="mx-auto max-w-[1040px]">
+    <div class="text-center text-[var(--ink-muted)] text-xs sm:text-sm md:text-base leading-relaxed">
+      <!-- Made with 💚 · CC0 Licensed · Open & Public -->
+      Made with 💚 · Open & Public
+    </div>
+  </div>
+</footer>
