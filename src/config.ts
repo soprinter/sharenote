@@ -9,7 +9,7 @@ export const ANALYTICS = {
 export const SITE = {
   website: "https://sharenote.xyz",
   author: "soprinter",
-  desc: "Sharenote docs: an FEP where miners mint sharenotes from shares to link verifiable work with likes, views, boosts, and collaboratively customize block templates.",
+  desc: "Sharenote is a proof-of-work note where each accepted share mints a signed, spendable record of work. It brings transparency to mining by allowing miners to own their payouts, track templates, and use their sharenotes across work-based economies.",
   title: "Sharenote",
   ogImage: "og-image.png",
   repo: "https://github.com/soprinter/sharenote",
