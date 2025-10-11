@@ -1,9 +1,11 @@
 import type { SocialObjects } from "@/lib/types";
 
-export const GA_ID_PLACEHOLDER = "G-Z172WTEVZD";
+const GOOGLE_ANALYTICS_FALLBACK_ID = "G-Z172WTEVZD";
+export const GA_ID_PLACEHOLDER = "G-XXXXXXXXXX";
 
 export const ANALYTICS = {
-  googleAnalyticsId: import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID ?? GA_ID_PLACEHOLDER,
+  googleAnalyticsId:
+    import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID ?? GOOGLE_ANALYTICS_FALLBACK_ID,
 } as const;
 
 export const SITE = {

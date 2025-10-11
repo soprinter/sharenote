@@ -4,11 +4,12 @@ import Hero from "@/components/landing/Hero.astro";
 import Timeline from "@/components/landing/Timeline.astro";
 import Sharenote from "@/components/landing/Sharenote.astro";
 import FAQ from "@/components/landing/FAQ.astro";
+import { SITE } from "@/config";
 ---
 
 <BaseLayout
-  title="Sharenote"
-  description="Mint sharenotes from mining work, audit transparent payouts, and connect verifiable effort to social engagement."
+  title={SITE.title}
+  description={SITE.desc}
 >
   <Hero />
   <Timeline />

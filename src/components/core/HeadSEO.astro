@@ -15,9 +15,12 @@ const canonicalURL = new URL(Astro.url);
 const { title, description, ogImage } = Astro.props as HeadSEOProps;
 const metaTitle = title ?? SITE.title;
 const metaDescription = description ?? SITE.desc;
-const measurementId = ANALYTICS.googleAnalyticsId;
+const measurementId =
+  typeof ANALYTICS.googleAnalyticsId === "string"
+    ? ANALYTICS.googleAnalyticsId.trim()
+    : "";
 const enableAnalytics =
-  typeof measurementId === "string" &&
+  import.meta.env.PROD &&
   measurementId.startsWith("G-") &&
   measurementId !== GA_ID_PLACEHOLDER;
 const resolvedOgImage = (ogImage ?? new URL(SITE.ogImage, canonicalURL)).toString();
